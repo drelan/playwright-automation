@@ -2,7 +2,7 @@ import { test, expect, Browser, Page, Locator } from '@playwright/test';
 import {webkit, chromium, firefox} from 'playwright';
 
 test('login test', async() =>{
-    const myBrowser:Browser = await chromium.launch({headless: false, channel: 'chrome'});
+    const myBrowser:Browser = await chromium.launch({headless: true, channel: 'chrome'});
     const myPage:Page = await myBrowser.newPage();
     await myPage.goto("https://demo.applitools.com");
     const emailId:Locator =  myPage.locator('#username');
